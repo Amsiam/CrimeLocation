@@ -31,7 +31,11 @@
     </style>
 
     <div id="map-container">
-        <div id="map-tooltip"></div>
+
+        <div class="flex justify-between gap-2">
+            <x-mary-datetime label="Start Date" wire:model.live="startDate" />
+            <x-mary-datetime label="End Date" wire:model.live="endDate" />
+        </div>
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-3.181 0 713.784 627.662">
 
