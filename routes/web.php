@@ -23,8 +23,7 @@ use App\Livewire\Stat;
 |
 */
 
-Route::get('/', [HomeController::class, 'ho
-// Adminme'])->name("index");
+Route::get('/', [HomeController::class, 'home'])->name("index");
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
