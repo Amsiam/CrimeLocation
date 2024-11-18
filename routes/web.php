@@ -23,8 +23,9 @@ use App\Livewire\Stat;
 |
 */
 
-Route::get('/', [HomeController::class, 'home'])->name("index");
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', function(){
+    return redirect('/dashboard');
+})->name("index");
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/stats', Stat::class)->middleware(['auth','verified'])->name('stat');
