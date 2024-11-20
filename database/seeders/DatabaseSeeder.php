@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
                 'date' => now()->subDays(rand(0, 30))->format('Y-m-d'),
                 'zilla_id' => 1,
                 'thana_id' => 1,
-                'union_id' => rand(3,4),
+                'union_id' => rand(3,13),
                 'crime_type' => ['red', 'green', 'blue'][rand(0, 2)],
             ]);
         }
