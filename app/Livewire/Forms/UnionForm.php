@@ -11,24 +11,21 @@ class UnionForm extends Form
     public ?Union $union = null;
 
     public $name;
-    public $latitude;
-    public $longitude;
+    public $bn_name;
     public $thana_id;
 
     protected $rules = [
         'name' => 'required|string',
+        'bn_name' => 'required|string',
         'thana_id' => 'required|exists:thanas,id',
-        'latitude' => 'required|numeric|between:-90,90',
-        'longitude' => 'required|numeric|between:-180,180',
     ];
 
     public function setUnion(Union $union)
     {
         $this->union = $union;
         $this->name = $union->name;
+        $this->bn_name = $union->bn_name;
         $this->thana_id = $union->thana_id;
-        $this->latitude = $union->latitude;
-        $this->longitude = $union->longitude;
     }
 
     public function store()
@@ -38,8 +35,7 @@ class UnionForm extends Form
         Union::create([
             'name' => $this->name,
             'thana_id' => $this->thana_id,
-            'latitude' => $this->latitude,
-            'longitude' => $this->longitude,
+            'bn_name' => $this->bn_name,
         ]);
 
         $this->reset();
@@ -52,8 +48,7 @@ class UnionForm extends Form
         $this->union->update([
             'name' => $this->name,
             'thana_id' => $this->thana_id,
-            'latitude' => $this->latitude,
-            'longitude' => $this->longitude,
+            'bn_name' => $this->bn_name,
         ]);
 
         $this->reset();

@@ -78,6 +78,7 @@ class UnionIndex extends Component
         $headers = [
             ['key' => 'id', 'label' => '#'],
             ['key' => 'name', 'label' => 'Union Name'],
+            ['key' => 'bn_name', 'label' => 'Bangla Name'],
             ['key' => 'thana.name', 'label' => 'Thana Name'] // Showing related Thana name
         ];
 

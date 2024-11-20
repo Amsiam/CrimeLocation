@@ -9,7 +9,7 @@ class Union extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'latitude', 'longitude', 'thana_id']; // Mass assignable fields
+    protected $fillable = ['name', 'bn_name', 'thana_id']; // Mass assignable fields
 
     // Define relationship with Thana
     public function thana()

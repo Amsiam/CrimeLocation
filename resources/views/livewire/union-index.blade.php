@@ -42,10 +42,7 @@
         <x-mary-modal wire:model="unionModal" class="backdrop-blur">
             <x-mary-form wire:submit="save">
                 <x-mary-input label="Union Name" placeholder="Enter union" wire:model="form.name" />
-                <x-mary-input label="Latitude" placeholder="Enter latitude" wire:model="form.latitude" />
-                <x-mary-input label="Longitude" placeholder="Enter longitude" wire:model="form.longitude" />
-
-
+                <x-mary-input label="Bangla Name" placeholder="Enter bangla name" wire:model="form.bn_name" />
 
                 <!-- Thana Selection Dropdown -->
                 <x-mary-select label="Thana" icon="o-user" placeholder="Select a thana" :options="$this->thanas" wire:model="form.thana_id" />
