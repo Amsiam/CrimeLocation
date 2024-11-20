@@ -41,7 +41,8 @@
               </defs>
 
             @if ($selectedUnion)
-                {!! $selectedUnionDetails->path !!}
+                {!! str_replace("TOTALCRIME",$this->crimes->count(),$selectedUnionDetails->path) !!}
+
 
             @else
 
