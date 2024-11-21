@@ -41,8 +41,7 @@
               </defs>
 
             @if ($selectedUnion)
-                {!! str_replace("TOTALCRIME",$this->crimes->count(),$selectedUnionDetails->path) !!}
-
+            {!! str_replace("TOTALCRIME",$this->crimes->count(),$selectedUnionDetails->path) !!}
 
             @else
 
@@ -69,7 +68,7 @@
               <text class="cls-2" transform="matrix(1.250111, 0, 0, 1.402238, 212.9272, 451.248627)" style="white-space: pre;">ষাটগুম্বজ</text>
               <text class="cls-2" transform="matrix(1.250111, 0, 0, 1.402238, 225.427261, 293.393646)" style="white-space: pre;">যাত্রাপুর</text>
               <text class="cls-2" transform="matrix(1.250111, 0, 0, 1.402238, 321.871033, 501.352814)" style="white-space: pre;">কাড়াপাড়া</text>
-              <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px;" x="386.988" y="415.614" transform="matrix(1.113218, 0, 0, 1.177787, -43.81366, -93.314857)">সদর</text>
+              <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px;" x="370.988" y="415.614" transform="matrix(1.113218, 0, 0, 1.177787, -43.81366, -93.314857)">পৌরসভা</text>
               <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 19px;" x="72.096" y="313.831">
                 {{-- rakhalagachi --}}
                 {{ $this->crimes->where("union_id","8")->count() }}
